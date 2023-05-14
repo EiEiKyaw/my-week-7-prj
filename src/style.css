@@ -31,6 +31,10 @@ li {
   line-height: 19px;
 }
 
+hr {
+  margin: 0px;
+}
+
 .fa-solid,
 .fa-title {
   font-size: 14px;
@@ -107,8 +111,48 @@ li {
   text-decoration: none;
 }
 
-.footer {
-  margin: 20px auto;
+.forecast-card {
+  color: #878787;
+  padding: 15px;
+  background-color: rgb(234, 236, 239, 0.7);
+  border: 1px solid rgb(218, 221, 225, 0.2);
+  border-radius: 5px;
+}
+
+.table {
+  color: #878787;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.f-day {
+  text-transform: uppercase;
+  margin: auto 0px;
+}
+
+.f-desc {
+  color: #000;
+  margin: auto 0px;
+  text-transform: capitalize;
+}
+
+.f-desc img {
+  width: 70px;
+  height: 70px;
+}
+
+.f-temp {
+  margin: auto 0px;
+}
+
+.f-max-temp {
+  color: #000;
+  margin-right: 5px;
+}
+
+.f-min-temp {
+  margin-left: 5px;
+  font-weight: 100;
 }
 
 #submit-btn {

@@ -20,7 +20,7 @@
   </head>
   <body>
     <div class="container main-div">
-      <div class="wrapper-div">
+      <div class="wrapper-div mb-2">
         <div class="row weather-div">
           <div class="col-sm-12 col-lg-7" id="current-div">
             <form action="#" id="search-form">
@@ -38,7 +38,8 @@
                   <input
                     type="submit"
                     value="Search"
-                    class="btn btn-primary w-100" id="submit-btn"
+                    class="btn btn-primary w-100"
+                    id="submit-btn"
                   />
                 </div>
               </div>
@@ -71,57 +72,58 @@
               </div>
             </div>
             <div class="row mt-3">
-                <div class="col-6">
+              <div class="col-6">
                 <ul>
-                    <li>
-                        <div class="desc-card">
-                            <i class="fa-sharp fa-solid fa-shower mr-3"></i>
-                            <span class="fa-title">Humidity</span>
-                            <p class="fa-value"><span id="humidity-value"></span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="desc-card">
-                            <i class="fa-solid fa-temperature-half mr-3"></i>
-                            <span class="fa-title">Feels Like</span>
-                            <p class="fa-value"><span id="fl-value"></span></p>
-                        </div>
-                    </li>
+                  <li>
+                    <div class="desc-card">
+                      <i class="fa-sharp fa-solid fa-shower mr-3"></i>
+                      <span class="fa-title">Humidity</span>
+                      <p class="fa-value"><span id="humidity-value"></span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="desc-card">
+                      <i class="fa-solid fa-temperature-half mr-3"></i>
+                      <span class="fa-title">Feels Like</span>
+                      <p class="fa-value"><span id="fl-value"></span></p>
+                    </div>
+                  </li>
                 </ul>
-                </div>
-                <div class="col-6">
-                    <ul>
-                        <li>
-                          <div class="desc-card">
-                            <i class="fa-solid fa-gauge-high mr-3"></i>
-                            <span class="fa-title">Wind Speed</span>
-                            <p class="fa-value"><span id="wind-value"></span></p>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="desc-card">
-                            <i class="fa-solid fa-regular fa-weight-scale mr-3"></i>
-                            <span class="fa-title">Pressure</span>
-                            <p class="fa-value"><span id="pressure-value"></span></p>
-                          </div>
-                        </li>
-                    </ul>
-                </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>
+                    <div class="desc-card">
+                      <i class="fa-solid fa-gauge-high mr-3"></i>
+                      <span class="fa-title">Wind Speed</span>
+                      <p class="fa-value"><span id="wind-value"></span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="desc-card">
+                      <i class="fa-solid fa-regular fa-weight-scale mr-3"></i>
+                      <span class="fa-title">Pressure</span>
+                      <p class="fa-value"><span id="pressure-value"></span></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
           <div class="col-sm-12 col-lg-5" id="forecast-div">
-            
+            <div class="forecast-card">
+              <p>7-day Forecast</p>
+              <hr />
+              <table class="table" id="forecast-table"></table>
+            </div>
           </div>
         </div>
       </div>
+      <small>
+        Coded by ...
+        <a href="https://github.com/EiEiKyaw" target="_blank">Ei Ei Kyaw</a>
+      </small>
     </div>
-    <small class="footer">
-      Coded by
-          <a
-            href="https://github.com/EiEiKyaw"
-            target="_blank"
-            >Ei Ei Kyaw</a
-          >
-        </small>
     <script src="src/app.js"></script>
   </body>
 </html>

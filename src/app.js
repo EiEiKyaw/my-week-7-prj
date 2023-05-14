@@ -21,10 +21,49 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast(response) {
+  let data = response.data.daily;
+  let forecastEle = document.querySelector("#forecast-table");
+  let forecastHtml = "";
+
+  data.forEach(function (forecastData, index) {
+    let innerText = "";
+    let dayVal = formatDay(forecastData.time);
+    if (index == 0) {
+      dayVal = "Today";
+    }
+    innerText = `<tr>
+                  <div class="row">
+                    <div class="col-3 f-day">${dayVal}</div>
+                    <div class="col-6 f-desc">
+                      <img
+                        src="${forecastData.condition.icon_url}"
+                        alt="Clear"
+                      />${forecastData.condition.description}
+                    </div>
+                    <div class="col-3 f-temp">
+                      <span class="f-max-temp">${Math.round(
+                        forecastData.temperature.maximum
+                      )}</span>/<span
+                        class="f-min-temp"
+                        >${Math.round(forecastData.temperature.minimum)}</span
+                      >
+                    </div>
+                  </div>
+                </tr><hr />`;
+    forecastHtml = forecastHtml + innerText;
+  });
+  forecastEle.innerHTML = forecastHtml;
+}
+
+function getForecastList(cityName) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${cityName}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayCurrentWeather(response) {
   let data = response.data;
   currentTemp = response.data.temperature.current;
-  console.log(data);
   let cityEle = document.querySelector("#city-name");
   let countryEle = document.querySelector("#country-name");
   let dateEle = document.querySelector("#date");
@@ -45,6 +84,8 @@ function displayCurrentWeather(response) {
   windEle.innerHTML = Math.round(data.wind.speed);
   pressureEle.innerHTML = Math.round(data.temperature.pressure);
   feelsEle.innerHTML = Math.round(data.temperature.feels_like);
+
+  getForecastList(data.city);
 }
 
 function searchWeather(cityName) {
