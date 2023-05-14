@@ -34,8 +34,8 @@ function displayForecast(response) {
     }
     innerText = `<tr>
                   <div class="row">
-                    <div class="col-3 f-day">${dayVal}</div>
-                    <div class="col-6 f-desc">
+                    <div class="col-2 f-day">${dayVal}</div>
+                    <div class="col-7 f-desc">
                       <img
                         src="${forecastData.condition.icon_url}"
                         alt="Clear"
