@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/d3e2a83548.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container main-div">
+      <div class="wrapper-div">
+        <div class="row weather-div">
+          <div class="col-sm-12 col-lg-7" id="current-div">
+            <form action="#" id="search-form">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="search"
+                    name="search-city"
+                    id="search-city"
+                    class="form-control"
+                    placeholder="Type a city ..."
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="btn btn-primary w-100" id="submit-btn"
+                  />
+                </div>
+              </div>
+            </form>
+            <div class="row overview">
+              <div class="col-6 general-desc">
+                <h1 id="city-name"></h1>
+                <h3 id="country-name"></h3>
+                <ul>
+                  <li>Last updated: <span id="date"></span></li>
+                  <li id="description"></li>
+                </ul>
+              </div>
+              <div class="col-6 detail-desc">
+                <div class="clearfix weather-temp">
+                  <img
+                    src=""
+                    alt="Clear"
+                    class="float-left"
+                    id="weather-icon"
+                  />
+                  <div class="float-left temp-gp">
+                    <strong id="temperature"></strong
+                    ><span class="units"
+                      ><a href="#" id="celcius-unit" class="active">°C</a> |
+                      <a href="#" id="fahrenheit-unit">°F</a></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6">
+                <ul>
+                    <li>
+                        <div class="desc-card">
+                            <i class="fa-sharp fa-solid fa-shower mr-3"></i>
+                            <span class="fa-title">Humidity</span>
+                            <p class="fa-value"><span id="humidity-value"></span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="desc-card">
+                            <i class="fa-solid fa-temperature-half mr-3"></i>
+                            <span class="fa-title">Feels Like</span>
+                            <p class="fa-value"><span id="fl-value"></span></p>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>
+                          <div class="desc-card">
+                            <i class="fa-solid fa-gauge-high mr-3"></i>
+                            <span class="fa-title">Wind Speed</span>
+                            <p class="fa-value"><span id="wind-value"></span></p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="desc-card">
+                            <i class="fa-solid fa-regular fa-weight-scale mr-3"></i>
+                            <span class="fa-title">Pressure</span>
+                            <p class="fa-value"><span id="pressure-value"></span></p>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          <div class="col-sm-12 col-lg-5" id="forecast-div">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+body {
+  font-family: arial, sans-serif;
+}
+
+h1,
+h3 {
+  color: #878787;
+  font-weight: bold;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
+
+.fa-solid,
+.fa-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.fa-title {
+  text-transform: uppercase;
+}
+
+.fa-value {
+  margin: 10px 0px 0px 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.desc-card {
+  color: #878787;
+  margin: 20px 0px;
+  padding: 15px;
+  background-color: rgb(234, 236, 239, 0.7);
+  border: 1px solid rgb(218, 221, 225, 0.2);
+  border-radius: 5px;
+}
+
+.wrapper-div {
+  margin: 30px auto;
+}
+
+.weather-div {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+
+.overview {
+  margin-top: 30px;
+}
+
+.general-desc,
+.detail-desc {
+  margin: auto 0px;
+}
+
+.weather-temp img {
+  margin-right: 5px;
+  height: 150px;
+  width: 150px;
+}
+
+.temp-gp {
+  margin-top: 40px;
+}
+
+.weather-temp strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temp .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+
+.weather-temp .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temp .active:hover {
+  text-decoration: none;
+}
+
+#submit-btn {
+  background-color: #878787;
+  border: 1px #878787;
+}
+
+#submit-btn:hover {
+  background-color: #000;
+  border: 1px #000;
+}
+
+#description {
+  text-transform: capitalize;
+}
