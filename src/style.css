@@ -107,6 +107,10 @@ li {
   text-decoration: none;
 }
 
+.footer {
+  margin: 20px auto;
+}
+
 #submit-btn {
   background-color: #878787;
   border: 1px #878787;
